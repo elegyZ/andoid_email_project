@@ -20,13 +20,11 @@ public class ActivityEmailReading extends Activity
 		TextView tv_from_content = (TextView)this.findViewById(R.id.tv_from_content);
 		TextView tv_to_content = (TextView)this.findViewById(R.id.tv_to_content);
 		TextView tv_cc_content = (TextView)this.findViewById(R.id.tv_cc_content);
-		TextView tv_bcc_content = (TextView)this.findViewById(R.id.tv_bcc_content);
 		TextView tv_subject_content = (TextView)this.findViewById(R.id.tv_subject_content);
 		TextView tv_email_content = (TextView)this.findViewById(R.id.tv_email_content);
 		tv_from_content.setText(extras.getString("from"));
 		tv_to_content.setText(extras.getString("to"));
 		tv_cc_content.setText(extras.getString("cc"));
-		tv_bcc_content.setText(extras.getString("bcc"));
 		tv_subject_content.setText(extras.getString("subject"));
 		tv_email_content.setText(extras.getString("content"));
 		Button bt_back = (Button)findViewById(R.id.bt_back);

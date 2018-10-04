@@ -22,37 +22,41 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int background_style=0x7f020000;
+        public static final int bg=0x7f020001;
+        public static final int bg2=0x7f020002;
+        public static final int button_shape=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int readbackground_style=0x7f020005;
+        public static final int scroll_shape=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001b;
+        public static final int action_settings=0x7f080019;
         public static final int bt_back=0x7f080000;
-        public static final int bt_clear=0x7f08001a;
-        public static final int bt_send=0x7f080019;
-        public static final int scrollView1=0x7f080011;
+        public static final int bt_clear=0x7f080018;
+        public static final int bt_send=0x7f080016;
+        public static final int scrollView1=0x7f08000e;
         public static final int space1=0x7f080001;
         public static final int space2=0x7f080004;
         public static final int space3=0x7f080007;
         public static final int space4=0x7f08000a;
         public static final int space5=0x7f08000d;
-        public static final int space6=0x7f080010;
-        public static final int tv_bcc=0x7f08000b;
-        public static final int tv_bcc_content=0x7f08000c;
+        public static final int tv_bcc=0x7f080012;
         public static final int tv_cc=0x7f080008;
         public static final int tv_cc_content=0x7f080009;
-        public static final int tv_email_content=0x7f080012;
+        public static final int tv_email_content=0x7f08000f;
         public static final int tv_from=0x7f080002;
         public static final int tv_from_content=0x7f080003;
-        public static final int tv_subject=0x7f08000e;
-        public static final int tv_subject_content=0x7f08000f;
+        public static final int tv_subject=0x7f08000b;
+        public static final int tv_subject_content=0x7f08000c;
         public static final int tv_to=0x7f080005;
         public static final int tv_to_content=0x7f080006;
-        public static final int txt_bcc=0x7f080015;
-        public static final int txt_cc=0x7f080014;
-        public static final int txt_content=0x7f080018;
-        public static final int txt_from=0x7f080017;
-        public static final int txt_subject=0x7f080016;
-        public static final int txt_to=0x7f080013;
+        public static final int txt_bcc=0x7f080013;
+        public static final int txt_cc=0x7f080011;
+        public static final int txt_content=0x7f080017;
+        public static final int txt_from=0x7f080015;
+        public static final int txt_subject=0x7f080014;
+        public static final int txt_to=0x7f080010;
     }
     public static final class layout {
         public static final int activity_emailreading=0x7f030000;

@@ -23,7 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityEmailReading"></activity>
+        <activity android:name=".ActivityEmailReading">
+            <intent-filter>
+                <action android:name="ActivityEmailReading" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

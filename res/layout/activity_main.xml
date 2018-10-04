@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#E0EEEE"
+    android:background="@drawable/background_style"
     tools:context="com.example.email_project.MainActivity" >
 
     <TextView
@@ -73,11 +73,11 @@
 
     <EditText
         android:id="@+id/txt_from"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/tv_from"
         android:layout_toEndOf="@+id/tv_from"
-        android:ems="10"
+        android:layout_marginStart="5dp"
         android:inputType="textEmailAddress"
         android:labelFor="@id/txt_from" >
 
@@ -86,11 +86,11 @@
 
     <EditText
         android:id="@+id/txt_to"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txt_from"
         android:layout_below="@+id/txt_from"
-        android:ems="10"
+        android:layout_toEndOf="@+id/tv_to"
+        android:layout_marginStart="5dp"
         android:inputType="textEmailAddress"
         android:labelFor="@id/txt_to" >
 
@@ -99,11 +99,11 @@
 
     <EditText
         android:id="@+id/txt_cc"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txt_to"
         android:layout_below="@+id/txt_to"
-        android:ems="10"
+        android:layout_toEndOf="@+id/tv_cc"
+        android:layout_marginStart="5dp"
         android:inputType="textEmailAddress"
         android:labelFor="@id/txt_cc" >
 
@@ -112,11 +112,11 @@
 
     <EditText
         android:id="@+id/txt_bcc"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txt_cc"
         android:layout_below="@+id/txt_cc"
-        android:ems="10"
+        android:layout_toEndOf="@+id/tv_bcc"
+        android:layout_marginStart="5dp"
         android:inputType="textEmailAddress"
         android:labelFor="@id/txt_bcc" >
 
@@ -125,11 +125,11 @@
 
     <EditText
         android:id="@+id/txt_subject"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txt_bcc"
         android:layout_below="@+id/txt_bcc"
-        android:ems="9"
+        android:layout_toEndOf="@+id/tv_subject"
+        android:layout_marginStart="5dp"
         android:inputType="textEmailSubject"
         android:labelFor="@id/txt_subject" >
 
@@ -139,10 +139,11 @@
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/tv_email_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tv_email_content"
-        android:layout_marginEnd="15dp" >
+        android:layout_above="@+id/bt_send"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/scroll_shape" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -151,9 +152,8 @@
 
             <EditText
                 android:id="@+id/txt_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="13"
                 android:inputType="textMultiLine"
                 android:labelFor="@id/txt_content" >
 
@@ -172,19 +172,25 @@
     <Button
         android:id="@+id/bt_send"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/scrollView1"
-        android:layout_below="@+id/scrollView1"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignStart="@+id/tv_subject"
         android:text="@string/send"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#8B8989"
+        android:background="@drawable/button_shape" />
 
     <Button
         android:id="@+id/bt_clear"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/scrollView1"
-        android:layout_alignEnd="@+id/scrollView1"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignEnd="@+id/txt_subject"
         android:text="@string/clear"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#8B8989"
+        android:background="@drawable/button_shape" />
 
 </RelativeLayout>
