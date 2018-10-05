@@ -2,7 +2,6 @@ package com.example.email_project;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,12 +29,12 @@ public class MainActivity extends Activity {
 		OnClickListener lst_send = new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				String strFrom = txt_from.getText().toString().trim();
-				String strTo = txt_to.getText().toString().trim();
-				String strCc = txt_cc.getText().toString().trim();
-				String strBcc = txt_bcc.getText().toString().trim();
-				String strSubject = txt_subject.getText().toString().trim();
-				String strContent = txt_content.getText().toString().trim();
+				String strFrom = txt_from.getText().toString();
+				String strTo = txt_to.getText().toString();
+				String strCc = txt_cc.getText().toString();
+				String strBcc = txt_bcc.getText().toString();
+				String strSubject = txt_subject.getText().toString();
+				String strContent = txt_content.getText().toString();
 
 				if (strFrom.isEmpty())
 					Toast.makeText(MainActivity.this, "Please input your email address!", Toast.LENGTH_SHORT).show();
@@ -76,27 +75,15 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	public void sendEmail(String[] to, String[] cc, String[] bcc, String subject, String content) {
-		Intent emailIntent = new Intent(Intent.ACTION_SEND);
-		emailIntent.setData(Uri.parse("mailto:"));
-		emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
-		emailIntent.putExtra(Intent.EXTRA_CC, cc);
-		emailIntent.putExtra(Intent.EXTRA_BCC, bcc);
-		emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
-		emailIntent.putExtra(Intent.EXTRA_TEXT, content);
-		emailIntent.setType("message/rfc822");
-		startActivity(Intent.createChooser(emailIntent, "Email"));
-	}
-
 	public void readEmail(String s1, String s2, String s3, String s4, String s5, String s6) {
 		Intent intent0 = new Intent("ActivityEmailReading");
 		intent0.putExtra("from", s1);
 		intent0.putExtra("to", s2);
 		intent0.putExtra("cc", s3);
+		intent0.putExtra("bcc", s4);
 		intent0.putExtra("subject", s5);
 		intent0.putExtra("content", s6);
 		startActivity(intent0);
-		sendEmail(s2.split(" "), s3.split(" "), s4.split(" "), s5, s6);
 	}
 
 }

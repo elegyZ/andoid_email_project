@@ -1,189 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/readbackground_style" >
+    android:layout_height="match_parent" >
 
-    <Button
-        android:id="@+id/bt_back"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="14dp"
-        android:textStyle="bold"
-        android:textColor="#8B8989"
-        android:text="@string/back"
-        android:background="@drawable/button_shape" />
-    
-    <Space
-        android:id="@+id/space1"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/readbackground_style" >
 
-     <TextView
-         android:id="@+id/tv_from"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignStart="@+id/bt_back"
-         android:layout_below="@+id/space1"
-         android:layout_marginTop="14dp"
-         android:text="@string/from"
-         android:textAppearance="?android:attr/textAppearanceMedium"
-         android:textColor="#36648B"
-         android:textStyle="bold" />
-     
-     <TextView
-         android:id="@+id/tv_from_content"
-         android:layout_width="match_parent"
-         android:layout_height="23dp"
-         android:layout_alignBottom="@+id/tv_from"
-         android:layout_marginStart="5dp"
-         android:layout_marginEnd="15dp"
-         android:layout_toEndOf="@+id/tv_from"
-         android:background="@drawable/scroll_shape"
-         android:gravity="center"
-         android:text="@string/test"
-         android:textColor="#000000"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
-     
-     <Space
-        android:id="@+id/space2"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_below="@+id/tv_from"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_email_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_shape"
+            android:text="@string/back"
+            android:textColor="#8B8989"
+            android:textStyle="bold" />
 
-     <TextView
-         android:id="@+id/tv_to"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignStart="@+id/bt_back"
-         android:layout_below="@+id/space2"
-         android:text="@string/to"
-         android:textAppearance="?android:attr/textAppearanceMedium"
-         android:textColor="#36648B"
-         android:textStyle="bold" />
-     
-     <TextView
-         android:id="@+id/tv_to_content"
-         android:layout_width="match_parent"
-         android:layout_height="23dp"
-         android:layout_alignBottom="@+id/tv_to"
-         android:layout_toEndOf="@+id/tv_to"
-         android:layout_marginStart="5dp"
-         android:layout_marginEnd="15dp"
-         android:background="@drawable/scroll_shape"
-         android:gravity="center"
-         android:text="@string/test"
-         android:textColor="#000000"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
-     
-     <Space
-        android:id="@+id/space3"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_below="@+id/tv_to"
-        android:layout_alignParentStart="true" />
+        <Space
+            android:id="@+id/space1"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
 
-     <TextView
-         android:id="@+id/tv_cc"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignStart="@+id/bt_back"
-         android:layout_below="@+id/space3"
-         android:text="@string/cc"
-         android:textAppearance="?android:attr/textAppearanceMedium"
-         android:textColor="#36648B"
-         android:textStyle="bold" />
-     
-     <TextView
-         android:id="@+id/tv_cc_content"
-         android:layout_width="match_parent"
-         android:layout_height="23dp"
-         android:layout_alignBottom="@+id/tv_cc"
-         android:layout_toEndOf="@+id/tv_cc"
-         android:layout_marginStart="5dp"
-         android:layout_marginEnd="15dp"
-         android:background="@drawable/scroll_shape"
-         android:gravity="center"
-         android:text="@string/test"
-         android:textColor="#000000"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/bt_back"
+            android:layout_below="@+id/space1"
+            android:layout_marginTop="14dp"
+            android:text="@string/from"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#36648B"
+            android:textStyle="bold" />
 
-     
-     <Space
-         android:id="@+id/space4"
-         android:layout_width="wrap_content"
-         android:layout_height="15dp"
-         android:layout_alignParentStart="true"
-         android:layout_below="@+id/tv_cc_content" />
+        <TextView
+            android:id="@+id/tv_from_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_from"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/tv_from"
+            android:background="@drawable/scroll_shape"
+            android:gravity="center"
+            android:text="@string/test"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
 
-     <TextView
-         android:id="@+id/tv_subject"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignStart="@+id/bt_back"
-         android:layout_below="@+id/space4"
-         android:text="@string/subject"
-         android:textAppearance="?android:attr/textAppearanceMedium"
-         android:textColor="#36648B"
-         android:textStyle="bold" />
-     
-     <TextView
-         android:id="@+id/tv_subject_content"
-         android:layout_width="match_parent"
-         android:layout_height="23dp"
-         android:layout_alignBottom="@+id/tv_subject"
-         android:layout_toEndOf="@+id/tv_subject"
-         android:layout_marginStart="5dp"
-         android:layout_marginEnd="15dp"
-         android:background="@drawable/scroll_shape"
-         android:gravity="center"
-         android:text="@string/test"
-         android:textColor="#000000"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
-     
-     <Space
-        android:id="@+id/space5"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_below="@+id/tv_subject"
-        android:layout_alignParentStart="true" />
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_from_content" />
 
-     <ScrollView
-         android:id="@+id/scrollView1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_below="@+id/space5"
-         android:layout_above="@+id/bt_back"
-         android:layout_alignStart="@+id/bt_back"
-         android:layout_marginEnd="15dp"
-         android:layout_marginBottom="10dp"
-         android:background="@drawable/scroll_shape" >
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/bt_back"
+            android:layout_below="@+id/space2"
+            android:text="@string/to"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#36648B"
+            android:textStyle="bold" />
 
-         <RelativeLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:orientation="vertical" >
+        <TextView
+            android:id="@+id/tv_to_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_to"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/tv_to"
+            android:background="@drawable/scroll_shape"
+            android:gravity="center"
+            android:text="@string/test"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
 
-             <TextView
-                 android:id="@+id/tv_email_content"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_alignParentStart="true"
-                 android:layout_alignParentTop="true"
-                 android:layout_marginStart="10dp"
-                 android:layout_marginTop="10dp"
-                 android:text="@string/test"
-                 android:textColor="#000000"
-                 
-                 android:textAppearance="?android:attr/textAppearanceMedium" />
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_to_content" />
 
-         </RelativeLayout>
-     </ScrollView>
+        <TextView
+            android:id="@+id/tv_cc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/bt_back"
+            android:layout_below="@+id/space3"
+            android:text="@string/cc"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#36648B"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_cc_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_cc"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/tv_cc"
+            android:background="@drawable/scroll_shape"
+            android:gravity="center"
+            android:text="@string/test"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <Space
+            android:id="@+id/space4"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_cc_content" />
+
+        <TextView
+            android:id="@+id/tv_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/bt_back"
+            android:layout_below="@+id/space4"
+            android:text="@string/subject"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#36648B"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_subject_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_subject"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/tv_subject"
+            android:background="@drawable/scroll_shape"
+            android:gravity="center"
+            android:text="@string/test"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <Space
+            android:id="@+id/space5"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_subject_content" />
+        
+        <TextView
+            android:id="@+id/tv_email_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/space5"
+            android:layout_alignStart="@+id/tv_subject"
+            android:layout_alignEnd="@+id/tv_subject_content"
+            android:background="@drawable/scroll_shape"
+            android:text="@string/test"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+        
+    </RelativeLayout>
+
+</ScrollView>
