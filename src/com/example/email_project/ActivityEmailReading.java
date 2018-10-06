@@ -51,10 +51,8 @@ public class ActivityEmailReading extends Activity
 		OnClickListener lst_back = new OnClickListener()
 		{
 			@Override
-			public void onClick(View arg0) 
-			{
-				Intent intent0 = new Intent(ActivityEmailReading.this,MainActivity.class);
-				startActivity(intent0);				
+			public void onClick(View arg0) {
+				onBackPressed();			
 			}
 			
 		};

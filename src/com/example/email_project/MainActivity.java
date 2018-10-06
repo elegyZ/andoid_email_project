@@ -49,6 +49,11 @@ public class MainActivity extends Activity {
 		OnClickListener lst_clear = new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
+				txt_from.setText("");
+				txt_to.setText("");
+				txt_cc.setText("");
+				txt_bcc.setText("");
+				txt_subject.setText("");
 				txt_content.setText("");
 			}
 		};
